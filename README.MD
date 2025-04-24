@@ -50,7 +50,7 @@ EmployeeManagementSystem/
 
 1. Clone the repo:
    ```bash
-   git clone https://github.com/yourusername/EmployeeManagementSystem.git
+   git clone https://github.com/ChetanGiri1997/BICTE_Assignment.git
    cd EmployeeManagementSystem
    ```
 
