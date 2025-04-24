@@ -1,0 +1,54 @@
+@model IEnumerable<EmployeeManagementSystem.Models.Employee>
+@using System.Linq
+
+@{
+    ViewData["Title"] = "Employee List";
+}
+
+<h2>Employee List</h2>
+
+<p>
+    <a asp-action="Create" class="btn btn-primary">Create New</a>
+</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>DOB</th>
+            <th>Contact Address</th>
+            <th>Qualifications</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employee in Model)
+        {
+            <tr>
+                <td>@employee.Name</td>
+                <td>@employee.DOB.ToShortDateString()</td>
+                <td>@employee.ContactAddress</td>
+                <td>
+                    @if (employee.Qualifications != null && employee.Qualifications.Any())
+                    {
+                        <ul>
+                            @foreach (var qualification in employee.Qualifications)
+                            {
+                                <li>@qualification.Course (@qualification.YearPassed, @qualification.MarksPercentage%)</li>
+                            }
+                        </ul>
+                    }
+                    else
+                    {
+                        <span>No qualifications</span>
+                    }
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@employee.Id" class="btn btn-sm btn-warning">Edit</a>
+                    <a asp-action="Delete" asp-route-id="@employee.Id" class="btn btn-sm btn-danger">Delete</a>
+                    <a asp-action="AddQualification" asp-route-id="@employee.Id" class="btn btn-sm btn-info">Add Qualification</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
