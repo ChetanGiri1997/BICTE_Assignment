@@ -18,7 +18,7 @@ An elegant and modern **ASP.NET MVC** web application for managing employees and
 | 👨‍💻 Language      | `C#`, `.NET 6+` |
 | 🎨 Frontend     | Razor Views, Bootstrap 5 |
 | ⚙️ Backend      | ASP.NET MVC, Entity Framework Core |
-| 💄️ Database     | SQL Server (Configured via `.env`) |
+| 💾 Database     | SQL Server  |
 | ☁️ Deployment   | DigitalOcean Droplet |
 | 🌩️ Tunneling    | Cloudflared Tunnel (Cloudflare Zero Trust) |
 | 🌐 DNS          | Cloudflare (DNS + CDN) |
