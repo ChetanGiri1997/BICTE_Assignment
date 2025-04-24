@@ -37,7 +37,6 @@ EmployeeManagementSystem/
 ├── wwwroot/                # Static files (CSS, JS, Bootstrap)
 ├── appsettings.json        # App configs
 ├── Program.cs              # App startup logic
-├── .env                    # Secure credentials
 └── EmployeeManagementSystem.csproj
 ```
 
